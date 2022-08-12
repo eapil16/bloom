@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="assets/css/jquery.formstyler.css">
+    <link rel="stylesheet" href="assets/css/jquery.formstyler.theme.css">
+    <link rel="stylesheet" href="assets/css/nouislider.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>BLOOM</title>
+  </head>
+  <body>
+    <div class="wrapper"> 
+      <header class="header">
+        <div class="container"> 
+          <div class="header-top"> 
+            <div class="header-top__left">
+              <div class="location" data-bs-toggle="modal" data-bs-target="#cityModal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12.998" viewBox="0 0 13 12.998">
+                  <path id="location_icon" data-name="location icon" d="M8.385,12.036c-.458,1.262-1.747,1.308-2.049,0l-1-4.318-4.32-1c-1.308-.3-1.262-1.663,0-2.122L12.175.034a.674.674,0,0,1,.847.847Z" transform="translate(-0.056 -0.001)" fill="#d5d5d5"></path>
+                </svg>
+                <p>Петропавловск-Камчатский</p>
+              </div>
+              <p class="address">ул. Цветочная, дом 7</p>
+            </div>
+            <div class="header-top__right">
+              <div class="header-top__right__item">
+                <div class="header-top__phones"> 
+                  <p class="phones-button">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+<path id="phone_icon" data-name="phone icon" d="M111.285,28.827l1.623,2.859a.707.707,0,0,1-.225.866l-1.443.866a9.082,9.082,0,0,0,1.849,2.729,8.827,8.827,0,0,0,2.705,1.95l.992-1.3a.661.661,0,0,1,.9-.173l2.886,1.776a.509.509,0,0,1,.135.78l-1.4,1.906c-1.8,1.343-5.32-.607-8.025-3.379-2.615-2.773-4.418-6.238-2.886-7.885l2.029-1.213a.618.618,0,0,1,.857.217Z" transform="translate(-107.836 -28.522)" fill="#d5d5d5" fill-rule="evenodd"/>
+</svg><a href="tel:89008007060">+7 (900) 800 70 60</a>
+                  </p>
+                  <div class="header-top__phones_block"> 
+                    <ul class="header-top__phones_list"> 
+                      <li class="header-top__phones_list_item"> <a class="header-top__phones_list_link" href="tel:88009005010">+7 (800) 900 50 10</a></li>
+                      <li class="header-top__phones_list_item"> <a class="header-top__phones_list_link" href="tel:89007006020">+7 (900) 700 60 20</a></li>
+                      <li class="header-top__phones_list_item"> <a class="header-top__phones_list_link" href="tel:88006008050">+7 (800) 600 80 50</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="header-top__right__item"><a class="mail" href="mailto:hello@sitename.ru">hello@sitename.ru </a></div>
+              <div class="header-top__right__item">
+                <div class="header-top__schedule">
+                  <p class="schedule-button schedule-button">Время работы</p>
+                  <div class="header-top__schedule_block"> 
+                    <p>Прием заказов с 1000 - 1800</p>
+                    <p>Доставка 24 часа в сутки</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-bottom">					
+            <div class="header-bottom__item">
+              <div class="header-bottom__logo"><a href="/"><img src="assets/images/logo.svg" alt=""><span>Интернет-магазин цветов</span></a></div>
+            </div>
+            <div class="header-bottom__item">
+              <div class="header-bottom__menu"> 
+                <div class="header__part d-hid header__toggle"> 
+                  <div class="menu-toggle-cont"><span class="menu-toggle"></span></div>
+                </div>
+                <div class="fixed-menu" id="nav"> 
+                  <div class="mobile-block-hidden"> 
+                    <div class="mobile-block_search"> 
+                      <form> 
+                        <form>
+                          <input type="text" placeholder="Найти...">
+                          <button class="btn button" type="search"> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+                              <path id="Path_3913" data-name="Path 3913" d="M190.133,112a8.074,8.074,0,1,0,4.749,14.607l4.02,4.022a1.267,1.267,0,0,0,1.792-1.792l-4.02-4.022A8.068,8.068,0,0,0,190.133,112Zm0,13.616a5.547,5.547,0,1,1,3.915-1.625A5.539,5.539,0,0,1,190.133,125.612Z" transform="translate(-182.064 -111.996)" fill="#104744"> </path>
+                            </svg>
+                          </button>
+                        </form>
+                      </form>
+                    </div>
+                    <div class="location" data-bs-toggle="modal" data-bs-target="#cityModal">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12.998" viewBox="0 0 13 12.998">
+                        <path id="location_icon" data-name="location icon" d="M8.385,12.036c-.458,1.262-1.747,1.308-2.049,0l-1-4.318-4.32-1c-1.308-.3-1.262-1.663,0-2.122L12.175.034a.674.674,0,0,1,.847.847Z" transform="translate(-0.056 -0.001)" fill="#d5d5d5"></path>
+                      </svg>
+                      <p>Петропавловск-Камчатский</p>
+                    </div>
+                  </div>
+                  <ul class="main-menu"> 
+                    <li class="main-menu__item"> <a class="main-menu__link" id="catalog" href="#">Каталог</a></li>
+                    <div class="submenu"> 
+                      <div class="container"> 
+                        <ul class="nav nav-tabs" id="spills-tab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="tab-1" data-bs-toggle="pill" data-bs-target="#tab-1-1" type="button" role="tab" aria-controls="tab-1-1" aria-selected="true">Каталог</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab-2" data-bs-toggle="pill" data-bs-target="#tab-2-2" type="button" role="tab" aria-controls="tab-2-2" aria-selected="false">Повод</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab-3" data-bs-toggle="pill" data-bs-target="#tab-3-3" type="button" role="tab" aria-controls="tab-3-3" aria-selected="false">Для кого</button>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="pills-tabContent">
+                          <div class="tab-pane fade show active" id="tab-1-1" role="tabpanel" aria-labelledby="tab-1">
+                            <ul class="submenu-list">	
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Акция</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Букеты</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Для дома</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Монобукеты</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Цветы в коробке </a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Авторские</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Цветы в корзине</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Мужские букеты</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Поштучно</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Сухоцветы</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Свадебные</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Искусственные цветы</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Шары </a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Мягкие игрушки</a></li>
+                            </ul>
+                          </div>
+                          <div class="tab-pane fade" id="tab-2-2" role="tabpanel" aria-labelledby="tab-2">
+                            <ul class="submenu-list">	
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Акция</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Букеты</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Для дома</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Монобукеты</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Цветы в коробке </a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Авторские</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Цветы в корзине</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Мужские букеты</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Поштучно</a></li>
+                            </ul>
+                          </div>
+                          <div class="tab-pane fade" id="tab-3-3" role="tabpanel" aria-labelledby="tab-3">
+                            <ul class="submenu-list">	
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Акция</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Букеты</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Для дома</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Монобукеты</a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Цветы в коробке </a></li>
+                              <li class="submenu-list__item"> <a class="submenu-list__link" href="#">Авторские</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <li class="main-menu__item"> <a class="main-menu__link" href="#">О магазине</a></li>
+                    <li class="main-menu__item"> <a class="main-menu__link" href="#">Доставка и оплата</a></li>
+                    <li class="main-menu__item"> <a class="main-menu__link" href="#">Отзывы</a></li>
+                    <div class="mobile-block">
+                      <li class="main-menu__item"> <a class="main-menu__link" href="#">Блог</a></li>
+                      <li class="main-menu__item"> <a class="main-menu__link" href="#">Контакты</a></li>
+                    </div>
+                    <div class="mobile-menu__button"> <img src="assets/images/button.svg" alt=""></div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="header-bottom__item">
+              <ul class="header-bottom__action">
+                <li> <a id="search" href="#"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+                      <path id="Path_3913" data-name="Path 3913" d="M190.133,112a8.074,8.074,0,1,0,4.749,14.607l4.02,4.022a1.267,1.267,0,0,0,1.792-1.792l-4.02-4.022A8.068,8.068,0,0,0,190.133,112Zm0,13.616a5.547,5.547,0,1,1,3.915-1.625A5.539,5.539,0,0,1,190.133,125.612Z" transform="translate(-182.064 -111.996)" fill="#d5d5d5"> </path>
+                    </svg></a></li>
+                <li> <a href="#"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                      <path id="add_to_favorite" data-name="add to favorite" d="M106.117,45.631a4.909,4.909,0,0,0-3.475-3.115c-2.731-.629-4.911,1.194-5.652,1.924-.739-.73-2.917-2.556-5.652-1.924a4.908,4.908,0,0,0-3.475,3.115c-.788,2.2-.712,5.687,4.124,9.758l4.782,3.918a.346.346,0,0,0,.221.079.351.351,0,0,0,.222-.079L102,55.387c4.833-4.068,4.909-7.551,4.121-9.755Z" transform="translate(-87.49 -42.386)" fill="#d5d5d5"></path>
+                    </svg></a></li>
+                <li> <a class="basket" id="basket" href="#"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19">
+                      <path id="basket" d="M4.275-1363.308a2.058,2.058,0,0,1-2.058-2.058L0-1373.757a1.267,1.267,0,0,1,1.267-1.267H17.733A1.267,1.267,0,0,1,19-1373.757l-2.217,8.391a2.058,2.058,0,0,1-2.058,2.058ZM8.8-1376.857a1.029,1.029,0,0,1,0-1.455l3.695-3.695a1.029,1.029,0,0,1,1.455,0,1.029,1.029,0,0,1,0,1.456l-3.695,3.694a1.025,1.025,0,0,1-.728.3A1.025,1.025,0,0,1,8.8-1376.857Z" transform="translate(0 1382.308)" fill="#d5d5d5"></path>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="header-search"> 
+        <div class="container">
+          <p>Поиск по сайту</p>
+          <div class="header-search__block">
+            <form>
+              <input type="text" placeholder="Найти...">
+              <button class="btn button" type="search">Найти</button>
+            </form>
+            <button class="btn-close" id="close-search" type="button"></button>
+          </div>
+        </div>
+      </div>
+      <div class="basket-block">
+        <div class="basket-block_close">
+           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10.998" viewBox="0 0 11 10.998">
+<path id="Path_28" data-name="Path 28" d="M-6954.5-1378.5l-4.5,4.5-1-1,4.5-4.5-4.5-4.5,1-1,4.5,4.5,4.5-4.5,1,1-4.5,4.5,4.5,4.5-1,1Z" transform="translate(6960 1385)" fill="#104744"></path>
+</svg>
+        </div>
+        <h2>Корзина</h2>
+        <div class="cart-total">
+          <div class="cart-total__item"> 
+            <div class="cart-total__item_content">
+              <div class="cart-total__item_content-image"> <a href="#"><img src="assets/images/cart-1.png" alt=""></a></div>
+              <div class="cart-total__item_content-text"><a class="link" href="#">Букет «Мона Лиза»</a>
+                <div class="input-group spinner">
+                  <button class="btn increase" type="button"><img src="assets/images/plus.svg" alt=""></button>
+                  <input class="spinner-input" type="text" value="1" readonly="readonly">
+                  <button class="btn decrease" type="button"> <img src="assets/images/minus.svg" alt=""></button>
+                </div>
+                <p class="price"> <span class="old">3 200 р.</span><span class="pr">3 200 р.</span></p>
+              </div>
+            </div>
+            <div class="cart-total__item_act"><div class="add-to-favorite">
+<svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+<path id="add_to_favorite" data-name="add to favorite" d="M106.117,45.631a4.909,4.909,0,0,0-3.475-3.115c-2.731-.629-4.911,1.194-5.652,1.924-.739-.73-2.917-2.556-5.652-1.924a4.908,4.908,0,0,0-3.475,3.115c-.788,2.2-.712,5.687,4.124,9.758l4.782,3.918a.346.346,0,0,0,.221.079.351.351,0,0,0,.222-.079L102,55.387c4.833-4.068,4.909-7.551,4.121-9.755Z" transform="translate(-87.49 -42.386)" fill="#d5d5d5"></path>
+</svg>
+</div><a class="delete" href="#">Удалить</a>
+            </div>
+          </div>
+          <div class="cart-total__text">
+            <p> <span>Товаров на сумму</span><strong>3 200 р.</strong></p>
+            <p> <span>Стоимость доставки</span><strong>250 р.</strong></p>
+            <p><span>Скидка</span><strong>0 р.</strong></p>
+            <p class="total"> <span>Итого</span><strong>3 450 р.</strong></p><a class="order" href="#">Оформить заказ</a>
+          </div>
+        </div>
+        <div class="basket-block__slider"> 
+          <p class="caption">Дополните букет подарком</p>
+          <p>Нажмите на нужный товар и он будет добавлен к вашему заказу</p>
+          <div class="slider-basket swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                    <div class="add-to-favorite">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                        <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                          <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                          <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                        </g>
+                      </svg>
+                    </div><a href="#"><img src="assets/images/category-13.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"><span class="price">3 200 р.</span><a class="name" href="#">Плюшевый заяц</a></span><a class="button in-button" href="#">+</a></span></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                    <div class="add-to-favorite">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                        <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                          <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                          <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                        </g>
+                      </svg>
+                    </div><a href="#"><img src="assets/images/category-14.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"><span class="price">3 200 р.</span><a class="name" href="#">Лама</a></span><a class="button in-button" href="#">+</a></span></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                    <div class="add-to-favorite">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                        <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                          <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                          <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                        </g>
+                      </svg>
+                    </div><a href="#"><img src="assets/images/category-13.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"><span class="price">3 200 р.</span><a class="name" href="#">Плюшевый заяц</a></span><a class="button in-button" href="#">+</a></span></div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                    <div class="add-to-favorite">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                        <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                          <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                          <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                        </g>
+                      </svg>
+                    </div><a href="#"><img src="assets/images/category-14.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"><span class="price">3 200 р.</span><a class="name" href="#">Лама</a></span><a class="button in-button" href="#">+</a></span></div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-prev basket-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+              <path id="Path_26" data-name="Path 26" d="M4.861-1378.927l-2.064-1.98H15.269v-1.186H2.659l2.156-2.068L3.941-1385l-2.705,2.6-.967.926.875.838L3.9-1378Z" transform="translate(-0.269 1385)" fill="#104744"></path>
+            </svg>
+          </div>
+          <div class="swiper-next basket-next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="7" viewBox="0 0 15 7">
+              <path id="Path_17" data-name="Path 17" d="M10.677-1378.927l2.064-1.98H.269v-1.186h12.61l-2.156-2.068L11.6-1385l2.705,2.6.967.926-.875.838L11.643-1378Z" transform="translate(-0.269 1385)" fill="#fff"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <main class="main-section">
+        <div class="inside-block">
+          <div class="container">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Избранное</li>
+              </ol>
+            </nav>
+            <div class="inside-block__caption">
+              <h1>Избранное</h1>
+              <select> 
+                <option value="">По популярности</option>
+                <option value="">По возрастанию цены</option>
+                <option value="">По убыванию цены</option>
+                <option value="">По скидкам</option>
+              </select>
+            </div>
+            <div class="favorites"> 
+              <div class="row"> 
+                <div class="col-xl-3 col-12">
+                  <div class="sedebar"> 
+                    <div class="chekbox-text">
+                      <p> 
+                        <input type="checkbox" id="chekbox-1" checked="checked">
+                        <label for="chekbox-1">Все</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-2">
+                        <label for="chekbox-2">Акция</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-3">
+                        <label for="chekbox-3">Букеты</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-4">
+                        <label for="chekbox-4">Для дома</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-5">
+                        <label for="chekbox-5">Монобукеты</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-6">
+                        <label for="chekbox-6">Цветы в коробке</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-7">
+                        <label for="chekbox-7">Авторские</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-8">
+                        <label for="chekbox-8">Цветы в корзине</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-9">
+                        <label for="chekbox-9">Мужские букеты</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-10">
+                        <label for="chekbox-10">Поштучно</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-11">
+                        <label for="chekbox-11">Сухоцветы</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-12">
+                        <label for="chekbox-12">Свадебные</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-13">
+                        <label for="chekbox-13">Шары </label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-14">
+                        <label for="chekbox-14">Мягкие игрушки</label>
+                      </p>
+                      <p> 
+                        <input type="checkbox" id="chekbox-15">
+                        <label for="chekbox-15">Искусственные цветы</label>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-9 col-12">
+                  <div class="favorites-block">
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"><img src="assets/images/category-5.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">3 200 р.</span><a class="name" href="#">Букет из роз</a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"><img src="assets/images/category-6.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">1 500 р.</span><a class="name" href="#">Нежный поцелуй</a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"><img src="assets/images/category-7.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">2 300 р.</span><a class="name" href="#"> Букет «Мона Лиза»</a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"> <img src="assets/images/category-8.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">1 800 р.</span><a class="name" href="#">Букет из роз </a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"><img src="assets/images/category-6.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">1 500 р.</span><a class="name" href="#">Нежный поцелуй</a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"><img src="assets/images/category-5.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">3 200 р.</span><a class="name" href="#">Букет из роз</a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"><img src="assets/images/category-6.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">1 500 р.</span><a class="name" href="#">Нежный поцелуй</a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"><img src="assets/images/category-7.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">2 300 р.</span><a class="name" href="#"> Букет «Мона Лиза»</a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"> <img src="assets/images/category-8.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">1 800 р.</span><a class="name" href="#">Букет из роз </a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"><img src="assets/images/category-6.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">1 500 р.</span><a class="name" href="#">Нежный поцелуй</a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"><img src="assets/images/category-5.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">3 200 р.</span><a class="name" href="#">Букет из роз</a></span><a class="button in-button" href="#">+</a></span></div>
+                    <div class="slider-categories__slide"><span class="slider-categories__slide_image">
+                        <div class="add-to-favorite">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17" viewBox="0 0 19 17">
+                            <g id="add_to_favorite" data-name="add to favorite" transform="translate(-87.49 -42.386)" fill="#fff">
+                              <path d="M 96.99044036865234 58.84193420410156 L 92.30696868896484 55.00480270385742 C 87.69317626953125 51.12038421630859 87.59980773925781 47.85507583618164 88.33401489257812 45.79961013793945 C 88.83251190185547 44.40412902832031 90.02667236328125 43.33283996582031 91.45046234130859 43.00382232666016 C 91.78903198242188 42.92560958862305 92.13473510742188 42.88595199584961 92.47792053222656 42.88595199584961 C 94.48802185058594 42.88595199584961 96.05741119384766 44.22199249267578 96.63885498046875 44.79640960693359 L 96.98974609375 45.14306259155273 L 97.34113311767578 44.79693222045898 C 97.92415618896484 44.22262954711914 99.49714660644531 42.88687133789062 101.5066528320312 42.88687133789062 C 101.8485717773438 42.88687133789062 102.19287109375 42.92625045776367 102.5300140380859 43.00391006469727 C 103.9527435302734 43.33246231079102 105.1469039916992 44.40381240844727 105.6462020874023 45.79981231689453 L 105.6577377319336 45.83206558227539 C 106.37939453125 47.88958740234375 106.2630996704102 51.14113235473633 101.6738662719727 55.00405120849609 L 101.7019195556641 54.98219299316406 C 101.6056900024414 55.05862808227539 97.66490936279297 58.28873443603516 96.99044036865234 58.84193420410156 Z" stroke="none"></path>
+                              <path d="M 92.47792053222656 43.38595199584961 C 92.17256164550781 43.38595199584961 91.86472320556641 43.42129135131836 91.56303405761719 43.49098205566406 C 90.30352783203125 43.78203964233398 89.24665069580078 44.73110961914062 88.80487060546875 45.96780014038086 C 88.39773559570312 47.10762023925781 88.38581085205078 48.29883193969727 88.76945495605469 49.50833892822266 C 89.30467224121094 51.19570922851562 90.60234832763672 52.91556549072266 92.62666320800781 54.62034606933594 L 96.99022674560547 58.19537734985352 C 98.07016754150391 57.30965042114258 100.9069061279297 54.98398971557617 101.3526000976562 54.62238311767578 L 101.3518829345703 54.62153244018555 C 103.37744140625 52.91654205322266 104.6758575439453 51.19604110717773 105.211051940918 49.50783157348633 C 105.5906295776367 48.31049346923828 105.5826110839844 47.13105392456055 105.1873626708984 46.00166320800781 L 105.1753921508789 45.96818923950195 C 104.7328720092773 44.73091125488281 103.6760177612305 43.78171157836914 102.4177627563477 43.49114990234375 C 102.1174011230469 43.42195129394531 101.8108673095703 43.38687133789062 101.5066528320312 43.38687133789062 C 99.68208312988281 43.38687133789062 98.23114776611328 44.6220703125 97.6920166015625 45.15312957763672 L 96.98923492431641 45.84539031982422 L 96.28746795654297 45.1521110534668 C 95.74993133544922 44.62107086181641 94.30268096923828 43.38595199584961 92.47792053222656 43.38595199584961 M 92.47792816162109 42.38594818115234 C 94.66815948486328 42.38594818115234 96.35699462890625 43.81510925292969 96.99025726318359 44.44071197509766 C 97.73103332519531 43.71101760864258 99.91114807128906 41.88755416870117 102.6422576904297 42.51667022705078 C 104.2300415039062 42.88333892822266 105.5610275268555 44.07698059082031 106.1169815063477 45.63142013549805 L 106.117073059082 45.63129043579102 C 106.904541015625 47.83597946166992 106.8292770385742 51.31811904907227 101.9958572387695 55.38658142089844 C 101.9918823242188 55.38944244384766 97.2572021484375 59.26940155029297 97.21241760253906 59.30657196044922 C 97.08403778076172 59.41194152832031 96.89631652832031 59.41194915771484 96.76964569091797 59.30741882324219 L 91.98763275146484 55.38956069946289 C 87.15081787109375 51.31859970092773 87.07560729980469 47.83621215820312 87.86315155029297 45.63142013549805 C 88.41828155517578 44.07741165161133 89.749267578125 42.88376998901367 91.33788299560547 42.51666259765625 C 91.73039245605469 42.42599105834961 92.11099243164062 42.38594818115234 92.47792816162109 42.38594818115234 Z" stroke="none" fill="#000"></path>
+                            </g>
+                          </svg>
+                        </div><a href="#"><img src="assets/images/category-6.png" alt=""></a></span><span class="slider-categories__slide_text"><span class="text"> <span class="price">1 500 р.</span><a class="name" href="#">Нежный поцелуй</a></span><a class="button in-button" href="#">+</a></span></div>
+                  </div>
+                  <div class="pagination-block"> 
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">4</a></li>
+                      <li class="page-item">...</li>
+                      <li class="page-item"><a class="page-link" href="#">15</a></li>
+                    </ul><a class="next" href="#">Следующая <span>страница </span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-lg-5 col-md-6 col-12"> 
+              <div class="footer-logo"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="110" height="30" viewBox="0 0 110 30">
+                  <path id="Logo" d="M107.45-330.546a9.625,9.625,0,0,1-2.914-6.968,9.064,9.064,0,0,1,2.784-6.774,9.615,9.615,0,0,1,3.205-2,11.184,11.184,0,0,1,4.047-.71,9.571,9.571,0,0,1,7.123,2.9,9.661,9.661,0,0,1,2.849,6.9,9.2,9.2,0,0,1-2.784,6.774,9.829,9.829,0,0,1-7.252,2.774A9.361,9.361,0,0,1,107.45-330.546Zm4.274-11.742a10.459,10.459,0,0,0-.842,2.774,17.312,17.312,0,0,0-.259,2.839q0,1.29.065,2.516.389,4.71,3.432,4.709,2.072,0,3.3-2.9a9.682,9.682,0,0,0,.809-2.742,19.086,19.086,0,0,0,.227-2.807,25.758,25.758,0,0,0-.13-2.581q-.324-4.774-3.237-4.774Q112.953-345.256,111.723-342.288Zm-25.7,11.742a9.625,9.625,0,0,1-2.914-6.968,9.064,9.064,0,0,1,2.784-6.774,9.617,9.617,0,0,1,3.205-2,11.186,11.186,0,0,1,4.047-.71,9.57,9.57,0,0,1,7.123,2.9,9.66,9.66,0,0,1,2.849,6.9,9.2,9.2,0,0,1-2.784,6.774,9.829,9.829,0,0,1-7.252,2.774A9.361,9.361,0,0,1,86.018-330.546Zm4.274-11.742a10.452,10.452,0,0,0-.842,2.774,17.318,17.318,0,0,0-.259,2.839q0,1.29.065,2.516.388,4.71,3.432,4.709,2.072,0,3.3-2.9a9.689,9.689,0,0,0,.809-2.742,19.082,19.082,0,0,0,.227-2.807,25.826,25.826,0,0,0-.13-2.581q-.324-4.774-3.238-4.774Q91.522-345.256,90.292-342.288Zm47.24,14.516a.411.411,0,0,1-.129-.774,5.021,5.021,0,0,0,.935-.671,2.909,2.909,0,0,0,.619-1.071,16.149,16.149,0,0,0,.259-3.871v-3.355q0-6-2.849-6a3.874,3.874,0,0,0-2.137.581q-1.619,1.161-1.619,1.806v6.968a17.769,17.769,0,0,0,.194,3.71,4.557,4.557,0,0,0,.771,1.232,5.8,5.8,0,0,0,.978.671c.262.233.141.733-.13.774,0,0-2.174,0-4.442,0-2.484,0-5.084,0-5.076,0a.419.419,0,0,1-.129-.774,3.64,3.64,0,0,0,1.1-.671,2.907,2.907,0,0,0,.84-.942,14.151,14.151,0,0,0,.324-4v-5.548a13.642,13.642,0,0,0-.129-1.548,5.236,5.236,0,0,0-.259-1.29c-.23-.575-.583-.831-1.748-.838a.346.346,0,0,1-.1-.678c.853-.281,2.384-.474,3.936-1.017s3.071-1.713,3.608-1.854a.516.516,0,0,1,.648.71,9.265,9.265,0,0,0-.324,1.871q-.065.774,0,.774a.186.186,0,0,0,.129-.065.762.762,0,0,1,.194-.129,9.148,9.148,0,0,1,2.2-1.806,8.113,8.113,0,0,1,4.047-1.355,5.378,5.378,0,0,1,2.979.774,5.587,5.587,0,0,1,1.975,2.839q.13,0,.453-.355a7.765,7.765,0,0,1,1.133-.936,15.687,15.687,0,0,1,1.781-1.1,8.863,8.863,0,0,1,3.918-1.226,5.643,5.643,0,0,1,2.72.613,3.954,3.954,0,0,1,1.716,1.839q1.1,2.193,1.1,7.548v2.774q0,1.42.032,2.387a3.884,3.884,0,0,0,.227,1.387,3.955,3.955,0,0,0,.919,1.168,4.451,4.451,0,0,0,1.089.671c.329.212.159.76-.13.774-.011,0-1.58,0-3.441,0-2.724-.006-6.072-.012-6.062,0-.415,0-.429-.648-.13-.774a3.646,3.646,0,0,0,1.036-.671,2.366,2.366,0,0,0,.567-.942,5.41,5.41,0,0,0,.356-1.613q.032-.968.032-2.387v-3.355q0-4.065-1.554-5.484a1.722,1.722,0,0,0-1.263-.516,4.242,4.242,0,0,0-1.457.258,8.988,8.988,0,0,0-1.3.581q-1.36.839-1.36,1.484v.258a38.779,38.779,0,0,1,.194,4v2.774a17.178,17.178,0,0,0,.194,3.71,2.915,2.915,0,0,0,.749,1.232c.486.476.874.457,1.194.671a.442.442,0,0,1-.129.774c0,.01-1.383.013-3.078.013C141.025-327.759,137.547-327.767,137.532-327.772Zm-61.974.005-2.674-.005c-.412-.073-.353-.524-.129-.775a8.639,8.639,0,0,1,1.2-.84,1.812,1.812,0,0,0,.679-.775,3.093,3.093,0,0,0,.356-1.615q.032-.969.032-2.39v-17.57a5.387,5.387,0,0,0-.194-1.841,1.187,1.187,0,0,0-.5-.633,2.342,2.342,0,0,0-1.182-.368c-.527-.03-.435-.415-.162-.614.172-.125,2.231-.492,4.14-1.1,1.007-.32,3.1-1.263,3.274-1.324.468-.129.739.208.648.775q-.13.775-.259,1.485a15.553,15.553,0,0,0-.194,2.842v18.345a13.82,13.82,0,0,0,.194,3.714c.233.715.339.819.815,1.066a4.724,4.724,0,0,1,1.193.84c.332.33.249.724-.13.775-.009.008-1.053.011-2.455.011S77.01-327.764,75.558-327.767ZM50-327.837c-.739-.022-.63-.573-.13-.775a4.841,4.841,0,0,0,1.943-1.55c.441-.705.324-1.852.324-4.005v-15.7a12.143,12.143,0,0,0-.324-4.005,4.307,4.307,0,0,0-1.943-1.486c-.338-.088-.507-.64.137-.646s1.05,0,2.129,0l9.584-.129a10.5,10.5,0,0,1,5.828,1.551,5.829,5.829,0,0,1,2.849,5.233q0,3.165-3.432,5.168a8.148,8.148,0,0,1-1.133.582q-.356.129-.356.194t.421.129a9.243,9.243,0,0,1,1.619.549,7.237,7.237,0,0,1,2.234,1.453,6.613,6.613,0,0,1,2.655,5.1,6.863,6.863,0,0,1-1.23,3.941A9.648,9.648,0,0,1,68-329.29a10.035,10.035,0,0,1-4.274,1.324c-1.554.129-3.886.129-3.886.129s-4.046.01-6.962.01C51.42-327.827,50.245-327.829,50-327.837Zm8.094-4.78a5.161,5.161,0,0,0,.324,2.423,1.472,1.472,0,0,0,1.1.484q.777.064,1.586.064a4.76,4.76,0,0,0,1.619-.291,3.622,3.622,0,0,0,1.457-1,5.985,5.985,0,0,0,1.554-4.522q0-4.458-2.849-6.073a5.091,5.091,0,0,0-2.526-.581H58.093Zm1-21.706q-.615.065-.745.452a7.54,7.54,0,0,0-.259,2.584v7.494h2.266a3.284,3.284,0,0,0,2.655-1.26,5.618,5.618,0,0,0,1.036-3.65q0-5.685-3.561-5.685A13.442,13.442,0,0,0,59.1-354.323Z" transform="translate(-49.469 357.643)" fill="#fff"></path>
+                </svg>
+                <p>Интернет-магазин цветов</p>
+              </div>
+              <div class="footer-contacts"> 
+                <p class="caption">Контакты</p>
+                <p> <a href="tel:89008007060">8 (900) 800 70 60 </a></p>
+                <p> <a href="mailto:hello@sitename.ru">hello@sitename.ru</a></p>
+                <p>Ежедневно с 1000 - 1800 </p>
+              </div>
+              <div class="footer-social">
+                <p class="caption">Мы в социальных сетях</p>
+                <ul class="social"> 
+                  <li> <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="13" viewBox="0 0 21 13">
+                        <path id="vk_logo" data-name="vk logo" d="M19.538,27.6c-7.175,0-11.267-4.88-11.438-13h3.594c.118,5.96,2.768,8.484,4.866,9.005V14.6h3.384v5.14c2.072-.221,4.25-2.564,4.984-5.14h3.384a9.923,9.923,0,0,1-4.6,6.48A10.3,10.3,0,0,1,29.1,27.6H25.375a6.46,6.46,0,0,0-5.43-4.646V27.6Z" transform="translate(-8.1 -14.6)" fill="#bcdbd9"></path>
+                      </svg></a></li>
+                  <li> <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17">
+                        <path id="odnoklassniki" d="M14.792,11.086a7.041,7.041,0,0,1-2.922.893l.679.684L15.026,15.2c.906.949-.568,2.433-1.484,1.517-.62-.644-1.529-1.573-2.477-2.543L8.587,16.709c-.916.913-2.39-.584-1.474-1.517.63-.644,1.529-1.573,2.477-2.533l.669-.684a7.008,7.008,0,0,1-2.942-.893c-1.059-.7-1.523-1.105-1.114-1.958.24-.485.9-.893,1.773-.189a5.2,5.2,0,0,0,3.081.959,5.2,5.2,0,0,0,3.081-.959c.873-.7,1.529-.3,1.773.189.4.853-.062,1.261-1.12,1.962ZM6.844,4.305a4.212,4.212,0,1,1,8.423,0,4.212,4.212,0,1,1-8.423,0Zm2.143,0a2.069,2.069,0,1,0,4.137,0,2.069,2.069,0,1,0-4.137,0Z" transform="translate(-6.056)" fill="#bcdbd9"></path>
+                      </svg></a></li>
+                  <li> <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                        <path id="pinterest" d="M17,16.5A8.5,8.5,0,0,1,5.984,24.62,9.555,9.555,0,0,0,7.04,22.392c.1-.4.528-2.022.528-2.022a2.276,2.276,0,0,0,1.947.977c2.564,0,4.411-2.358,4.411-5.289A4.989,4.989,0,0,0,8.685,11.15c-3.667,0-5.618,2.461-5.618,5.145a3.814,3.814,0,0,0,1.724,3.294c.161.075.247.041.284-.113.027-.117.171-.7.236-.963a.254.254,0,0,0-.058-.243,3.347,3.347,0,0,1-.627-1.94,3.678,3.678,0,0,1,3.839-3.688A3.356,3.356,0,0,1,12.017,16.1c0,2.3-1.162,3.894-2.673,3.894a1.233,1.233,0,0,1-1.258-1.535,17.08,17.08,0,0,0,.7-2.831,1.067,1.067,0,0,0-1.076-1.2c-.853,0-1.539.881-1.539,2.063a3.063,3.063,0,0,0,.254,1.261s-.84,3.558-.994,4.223a8.228,8.228,0,0,0-.031,2.44A8.5,8.5,0,1,1,17,16.5Z" transform="translate(0 -8)" fill="#bcdbd9"></path>
+                      </svg></a></li>
+                  <li> <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                        <path id="whatsapp" d="M14.454,34.47A8.427,8.427,0,0,0,1.2,44.636L0,49l4.466-1.173a8.4,8.4,0,0,0,4.026,1.025h0A8.371,8.371,0,0,0,14.454,34.47ZM8.5,47.433a6.989,6.989,0,0,1-3.567-.975l-.254-.152L2.026,47l.706-2.584-.167-.266a7.015,7.015,0,1,1,13.012-3.723A7.08,7.08,0,0,1,8.5,47.433Zm3.84-5.244c-.209-.106-1.245-.615-1.438-.683s-.334-.106-.474.106-.543.683-.668.827-.247.159-.455.053a5.73,5.73,0,0,1-2.865-2.5c-.216-.372.216-.345.619-1.15a.39.39,0,0,0-.019-.368c-.053-.106-.474-1.142-.649-1.563s-.345-.353-.474-.36-.262-.008-.4-.008a.78.78,0,0,0-.562.262,2.365,2.365,0,0,0-.736,1.757,4.124,4.124,0,0,0,.858,2.178,9.406,9.406,0,0,0,3.6,3.18,4.119,4.119,0,0,0,2.527.527,2.156,2.156,0,0,0,1.419-1,1.76,1.76,0,0,0,.121-1C12.685,42.344,12.545,42.291,12.336,42.189Z" transform="translate(0 -32)" fill="#bcdbd9"></path>
+                      </svg></a></li>
+                  <li> <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                        <path id="telegram" d="M8.5,8A8.5,8.5,0,1,0,17,16.5,8.5,8.5,0,0,0,8.5,8Zm3.94,5.781c-.128,1.344-.681,4.606-.963,6.111-.119.637-.354.851-.581.871-.494.045-.868-.326-1.347-.64-.748-.49-1.171-.8-1.9-1.274-.839-.553-.3-.857.183-1.354.125-.13,2.3-2.108,2.342-2.288a.173.173,0,0,0-.04-.15.2.2,0,0,0-.176-.017q-.113.026-3.585,2.37a1.614,1.614,0,0,1-.922.34,6.064,6.064,0,0,1-1.321-.313c-.532-.173-.955-.264-.919-.558q.029-.23.632-.47Q7.564,14.791,8.8,14.275a13.2,13.2,0,0,1,3.171-1.158.56.56,0,0,1,.329.1.358.358,0,0,1,.121.23A1.5,1.5,0,0,1,12.44,13.781Z" transform="translate(0 -8)" fill="#bcdbd9"></path>
+                      </svg></a></li>
+                  <li> <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17">
+                        <path id="vimeo-v" d="M19.991,68.046q-.134,2.87-4.08,7.86-4.078,5.213-6.9,5.213-1.748,0-2.96-3.173c-1.571-5.67-2.241-8.992-3.54-8.992a6.258,6.258,0,0,0-1.571.926L0,68.686c2.3-1.988,4.5-4.2,5.884-4.323Q8.221,64.14,8.759,67.5c1.281,7.965,1.848,9.167,4.178,5.56A7.681,7.681,0,0,0,14.285,70.1c.214-2.014-1.6-1.878-2.826-1.36q1.473-4.746,5.634-4.612C19.138,64.175,20.107,65.487,19.991,68.046Z" transform="translate(0 -64.119)" fill="#bcdbd9"></path>
+                      </svg></a></li>
+                  <li> <a href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13">
+                        <path id="youtube" d="M32.557,66.034a2.294,2.294,0,0,0-1.591-1.645A52.05,52.05,0,0,0,23.933,64a52.05,52.05,0,0,0-7.032.389,2.294,2.294,0,0,0-1.591,1.645,26.857,26.857,0,0,0,0,8.958A2.258,2.258,0,0,0,16.9,76.611,52.05,52.05,0,0,0,23.933,77a52.05,52.05,0,0,0,7.032-.389,2.258,2.258,0,0,0,1.591-1.619,26.858,26.858,0,0,0,0-8.958ZM22.092,73.262v-5.5l4.7,2.749Z" transform="translate(-14.933 -64)" fill="#bcdbd9"></path>
+                      </svg></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-7 col-md-6 col-12"> 
+              <div class="footer-form">
+                <p class="caption">Подписаться на рассылку</p>
+                <form> 
+                  <input type="text" placeholder="Укажите свой email...">
+                  <button class="button" type="submit"><img src="assets/images/arrow.svg" alt=""></button>
+                </form>
+              </div>
+              <div class="row">
+                <div class="col-xl-8 col-md-6 col-6">
+                  <p class="caption">Каталог</p>
+                  <ul class="footer-menu two-column"> 
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Акция</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Букеты</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Для дома</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Монобукеты</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Цветы в коробке</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Авторские</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Цветы в корзине</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Мужские букеты</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Поштучно</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Сухоцветы</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Свадебные</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Искусственные цветы</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Шары </a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Мягкие игрушки</a></li>
+                  </ul>
+                </div>
+                <div class="col-xl-4 col-md-6 col-6">
+                  <p class="caption">Информация</p>
+                  <ul class="footer-menu"> 
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">О магазине</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Доставка и оплата</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Отзывы</a></li>
+                    <li class="footer-menu__item"> <a class="footer-menu__link" href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal fade" id="cityModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Ваш город</h5>
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+              <ul class="city-list"> 
+                <li> <a href="#">Астрахань</a></li>
+                <li> <a href="#">Барнаул</a></li>
+                <li> <a href="#">Белгород</a></li>
+                <li> <a href="#">Великий Новгород</a></li>
+                <li> <a href="#">Владивосток</a></li>
+                <li> <a href="#">Владимир</a></li>
+                <li> <a href="#">Волгоград</a></li>
+                <li> <a href="#">Воронеж</a></li>
+                <li> <a href="#">Екатеринбург</a></li>
+                <li> <a href="#">Иваново</a></li>
+                <li> <a href="#">Иркутск</a></li>
+                <li> <a href="#">Казань</a></li>
+                <li> <a href="#">Калининград</a></li>
+                <li> <a href="#">Калуга</a></li>
+                <li> <a href="#">Киров</a></li>
+                <li> <a href="#">Краснодар</a></li>
+                <li> <a href="#">Красноярск</a></li>
+                <li> <a href="#">Курск</a></li>
+                <li> <a href="#">Липецк</a></li>
+                <li> <a href="#">Москва</a></li>
+                <li> <a href="#">Нижний Новгород</a></li>
+                <li> <a href="#">Новосибирск</a></li>
+                <li> <a href="#">Омск</a></li>
+                <li> <a href="#">Оренбург</a></li>
+                <li> <a href="#">Пенза</a></li>
+                <li> <a href="#">Пермь</a></li>
+                <li> <a href="#">Петропавловск-Камчатский</a></li>
+                <li> <a href="#">Ростов-на-Дону</a></li>
+                <li> <a href="#">Рязань</a></li>
+                <li> <a href="#">Самара</a></li>
+                <li> <a href="#">Санкт-Петербург</a></li>
+                <li> <a href="#">Саратов</a></li>
+                <li> <a href="#">Сочи</a></li>
+                <li> <a href="#">Ставрополь</a></li>
+                <li> <a href="#">Тверь</a></li>
+                <li> <a href="#">Тольятти</a></li>
+                <li> <a href="#">Томск</a></li>
+                <li> <a href="#">Тула</a></li>
+                <li> <a href="#">Тюмень</a></li>
+                <li> <a href="#">Улан-Удэ</a></li>
+                <li> <a href="#">Ульяновск</a></li>
+                <li> <a href="#">Хабаровск</a></li>
+                <li> <a href="#">Челябинск</a></li>
+                <li> <a href="#">Якутск</a></li>
+                <li> <a href="#">Ярославль</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Записаться на прием</h5>
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+              <p class="note">Оставьте свои контактные данные, и наш специалист свяжется с вами.</p>
+              <div class="form-group"> 
+                <label>Имя</label>
+                <input class="form-control" placeholder="Укажите свое имя">
+              </div>
+              <div class="form-group"> 
+                <label>Телефон</label>
+                <input class="form-control" id="phone" placeholder="+7 (___) ___ - __ - __">
+              </div>
+              <div class="form-group"> 
+                <label>Комментарий</label>
+                <textarea class="form-control" placeholder="Напишите нам что-нибудь"></textarea>
+              </div>
+              <div class="chekbox">
+                <p>
+                  <input type="checkbox" id="idform-1" checked="checked">
+                  <label for="idform-1">Я даю свое согласие на обработку <a href="#">персональных данных.</a></label>
+                </p>
+              </div><a class="btn button button-big button-dark-blue" href="#">Отправить</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="assets/js/swiper-bundle.min.js"> </script>
+      <script src="assets/js/jquery.maskedinput.js"></script>
+      <script src="assets/js/jquery.fancybox.min.js"></script>
+      <script src="assets/js/jquery.formstyler.js"></script>
+      <script src="assets/js/nouislider.js"></script>
+      <script src="assets/js/wNumb.js"></script>
+      <script src="assets/js/perfect-scrollbar.js"></script>
+      <script src="assets/js/script.js"></script>
+    </div>
+  </body>
+</html>
